@@ -1,0 +1,362 @@
+test09
+
+> express-html@0.0.1 start /home/bitnami/websites
+> node server.js
+
+Running at Port 3005
+{ telefone: 'rafael09' }
+{ telefone: 'rafael09' }
+{ telefone2: 'thank' }
+{ telefone: '996182361' }
+{ telefone: '996182361' }
+{}
+{ telefone: '(11) 99618-2361' }
+{ telefone2: 'meutelefonefake' }
+{ telefone1: '98154-7298' }
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{ email1: 'rfa@email.com' }
+{ email1: 'rfa@email.com' }
+{ email2: 'meuemail2@test.com' }
+{ email1: 'jessica_neuro@yahoo.com' }
+{ email1: 'gt.estherkim@gmail.com' }
+{ email1: 'kbutanyway@yahoo.com' }
+{ email1: 'rafae@test.com' }
+{ email1: 'rafae@test.com' }
+{ email1: 'kmccaule@gmail.com' }
+{ email1: 'julianasantos0133@gmail. com' }
+{ email1: 'gvargiso@gmail.com' }
+{ email1: 'daniel_sholler@yahoo.com' }
+{ email1: 'chantelmccourt@gmail.com' }
+{ email1: 'rd4433@yahoo.com' }
+{ email1: 'jdy24@yahoo.com' }
+{ email1: 'llawson49@verizon.net' }
+{ email1: 'talockett77@gmail.com' }
+{ email1: 'monica.shdll@gmail.com' }
+{ email1: 'toadstoolavenue@gmail.com' }
+{ email1: 'cvalentin@acranommasonry.com' }
+{ email1: 'camconcay@yahoo.com' }
+{ email1: 'jmeils22@gmail.com' }
+{ email1: 'richardfriedman2003@yahoo.com' }
+{}
+{}
+{}
+{}
+{}
+{}
+{ email1: 'nyltom@yahoo.com' }
+{ email1: 'kirby.liu@gmail.com' }
+{ email1: 'fellowshadow@gmail.com' }
+{ email1: 'jmeils22@gmail.com' }
+{ email1: 'andrewbartlow@gmail.com' }
+{ email1: 'dianalynnxk@gmail.com' }
+{ email1: 'cherif@gmail.com' }
+{ email1: 'bogeybobby1@gmail.com' }
+{ email1: 'foundation@qtum.org' }
+{ email1: 'safermedical@yahoo.com' }
+{ email1: 'jens.roehring@freenet.de' }
+{ email2: '' }
+{ email2: '' }
+{ email2: '' }
+{ email2: '' }
+{ email2: '' }
+{ email1: 'wesley_290111@yahoo.com' }
+{ email1: 'clara.balardy@gmail.com' }
+{ email1: 'wzwang2000@yahoo.com' }
+{ email1: 'savage.belinda@gmail.com' }
+{ email1: 'martinhbauman@gmail.com' }
+{ email1: 'shaikh2233@gmail.com' }
+{ email1: 'csowdon@rogers.com' }
+{ email1: 'tracie@traciefalcone.com' }
+{ email1: 'russ@phoenixorganization.com' }
+{ email1: 'cmmarkel@charter.net' }
+{ email1: 'hopicc@yahoo.com' }
+{ email1: 'galen.bagley@gmail.com' }
+{ email1: 'killrate69@gmail.com' }
+{ email1: 'vu0tran@gmail.com' }
+{ email1: 'aadatoo@gmail.com' }
+{ email1: 'dee1329@yahoo.com' }
+{ email1: 'rsoupermom@yahoo.com' }
+{ email1: 'galen.bagley@gmail.com' }
+{ email1: 'galen.bagley@gmail.com' }
+{ email1: 'downy100@yahoo.com' }
+{ email1: 'wzwang2000@yahoo.com' }
+{ email1: 'wayneleemartin@yahoo.co.uk' }
+{ email1: 'duetschl@yahoo.com' }
+{ email1: 'brikehara@fellowshipnwa.org' }
+{ email1: 'radhasuk@yahoo.com' }
+{ email1: 'bap0729@gmail.com' }
+{ email1: 'cabrerastore@yahoo.com' }
+{ email1: 'jackorzi@gmail.com' }
+{ email1: 'wyattmcbain@gmail.com' }
+{ email1: 'jdcalvert20@gmail.com' }
+{ email1: 'duetschl@yahoo.com' }
+{ email1: 'ellenlangham@gmail.com' }
+{ email1: 'jamesthefirst70@yahoo.com' }
+{ email1: 'safermedical@yahoo.com' }
+{ email1: 'safermedical@yahoo.com' }
+{ email1: '623pattylbaker@gmail.com' }
+{ email1: 'vu0tran@gmail.com' }
+{ email1: 'saskia9@gmail.com' }
+{ email1: 'li-ming.wang@hsc.utah.edu' }
+{ email1: 'aaronkarmiste@gmail.com' }
+{ email1: 'meredith.boniface@gmail.com' }
+{ email1: 'dworkman72@gmail.com' }
+{ email1: 'cgocksch@gmail.com' }
+{ email1: 'okastrong@yahoo.com' }
+{ email1: 'dtlewis511@gmail.com' }
+{ email1: 'ecrahmanian@yahoo.com' }
+{ email1: 'swifting@gmail.com' }
+{ email1: 'janemcfaulkner@gmail.com' }
+{ email1: 'sandvossdur@teleos-web.de' }
+{ email1: 'alyssajank@gmail.com' }
+{ email1: 'tseainc@sbcglobal.net' }
+{ email1: 'thecoolestnerd23@gmail.com' }
+{ email1: 'michaeljsmith4@gmail.com' }
+{ email1: 'prakashenoy@gmail.com' }
+{ email1: 'foundation@qtum.org' }
+{ email1: 'jsh.painter@gmail.com' }
+{ email1: 'georgia.harmon@gmail.com' }
+{ email1: 'bruno-ludwig@t-online.de' }
+{ email1: 'ronrross@earthlink.net' }
+{ email1: 'rebeccafriesen1@gmail.com' }
+{ email1: 'kenny@erbphysicaltherapy.net' }
+{ email1: 'borges.rod@gmail.com' }
+{ email1: 'o.massage44@gmail.com' }
+{ email1: 'katestendahl@gmail.com' }
+{ email1: 'jrgraham1125@gmail.com' }
+{ email1: 'rog15_1999@yahoo.com' }
+{ email1: 'jongyoo123@gmail.com' }
+{ email1: 'katestendahl@gmail.com' }
+{ email1: 'mr_killingsworth@yahoo.com' }
+{ email1: 'mr_killingsworth@yahoo.com' }
+{ email1: 'lmparker3@yahoo.com' }
+{ email1: 'bdmitchell92@yahoo.com' }
+{ email1: 'deeachap@yahoo.com' }
+{ email1: 'rebeccafriesen1@gmail.com' }
+{ email1: 'dee1329@yahoo.com' }
+{ email1: 'corleyjh1@gmail.com' }
+{ email1: 'annalenacarlsson58@gmail.com' }
+{ email1: 'bcachot@gmail.com' }
+{ email1: 'corneliafprior@gmail.com' }
+{ email1: 'palak.patel.2012@gmail.com' }
+{ email1: 'tyler_jacobsen1@yahoo.com' }
+{ email1: 'kcdemeter@gmail.com' }
+{ email1: 'maddogranch@gmail.com' }
+{ email1: 'bdmitchell92@yahoo.com' }
+{ email1: 'everlasting.2tm9@i.softbank.jp' }
+{ email1: 'bruno.mercier@aleph-experts.com' }
+{ email1: 'mokess@yahoo.com' }
+{ email1: 'faramarz.ahmadi@gmail.com' }
+{ email1: 'chrissy.akin@gmail.com' }
+{ email1: 'genelynv_gvillamor@yahoo.com' }
+{ email1: 'colettechap@gmail.com' }
+{ email1: 'ece001@gmail.com' }
+{ email1: 'kerrybadgley@gmail.com' }
+{ email1: 'kengyang1980@gmail.com' }
+{ email1: 'joekwok01@gmail.com' }
+{ email1: 'larry.caamano@gmail.com' }
+{ email1: 'greenwell31@yahoo.com' }
+{ email1: 'aniekan1@gmail.com' }
+{ email1: 'cfar035@gmail.com' }
+{ email1: 'radhasuk@yahoo.com' }
+{ email1: 'bovee350@gmail.com' }
+{ email1: 'apeveland@yahoo.com' }
+{ email1: 'martinellie2@gmail.com' }
+{ email1: 'apeveland@yahoo.com' }
+{ email1: 'bovee350@gmail.com' }
+{ email1: 'bovee350@gmail.com' }
+{ email1: 'salanguitrs@yahoo.com' }
+{ email1: 'diazofmurrieta5@gmail.com' }
+{ email1: 'againstluv@yahoo.com' }
+{ email1: 'ajdoro94@gmail.com' }
+{ email1: 'nancyspinosa@gmail.com' }
+{ email1: 'howard.liff@gmail.com' }
+{ email1: 'rowyourboatproductions@gmail.com' }
+{ email1: 'ilanaks@gmail.com' }
+
+> express-html@0.0.1 start /home/bitnami/websites
+> node server.js
+
+Running at Port 3005
+{ email1: 'asdasd@asda2.com' }
+{ email1: 'sa3ronaldo@gmail.com' }
+{ email1: 'adrielcastros@gmail.com' }
+{ email1: 'Mizrango@hotmIl.com' }
+{ email1: 'rafael.castro@sebrae.com.br' }
+RangeNotSatisfiableError: Range Not Satisfiable
+    at SendStream.error (/home/bitnami/websites/node_modules/send/index.js:282:31)
+    at SendStream.send (/home/bitnami/websites/node_modules/send/index.js:678:19)
+    at onstat (/home/bitnami/websites/node_modules/send/index.js:737:10)
+    at FSReqWrap.oncomplete (fs.js:114:15)
+{ email1: 'ericsonsobrinho@gmail.com' }
+{ email2: 'Bernardogontijo@gmail.com' }
+{ email1: 'elielsonsao@hotmail.com' }
+{ email1: 'nojr@uol.com.br' }
+{ email1: 'lcnvieira@gmail.com' }
+{}
+RangeNotSatisfiableError: Range Not Satisfiable
+    at SendStream.error (/home/bitnami/websites/node_modules/send/index.js:282:31)
+    at SendStream.send (/home/bitnami/websites/node_modules/send/index.js:678:19)
+    at onstat (/home/bitnami/websites/node_modules/send/index.js:737:10)
+    at FSReqWrap.oncomplete (fs.js:114:15)
+{ email1: 'andersonchile@gmail.com' }
+{}
+{ email1: 'robinlynn77@gmail.com' }
+{ email1: 'johvsta@verizon.net' }
+{ email1: 'deafraga@yahoo.com' }
+{ email1: 'leroym97@gmail.com' }
+{ email1: 'caroloppenheim@yahoo.com' }
+{ email1: 'caroloppenheim@yahoo.com' }
+{ email1: 'bobbyhwork@gmail.com' }
+{ email1: 'reesehodgers@yahoo.com' }
+{ email1: 'phil.l@stramowski.com' }
+{ email1: 'mkiel1987@gmail.com' }
+{ email1: 'scott.ks14@gmail.com' }
+{ email1: 'petra.yilmaz@online.de' }
+{ email1: 'lreed3760@comcast.net' }
+{ email1: 'edshe3@yahoo.com' }
+{ email1: 'edshe3@yahoo.com' }
+{ email1: 'brewer280z@charter.net' }
+{ email1: 'jamienmel@bellsouth.net' }
+{ email1: 'jamienmel@bellsouth.net' }
+{ email1: 'tonyrosborne@yahoo.com' }
+{ email1: 'tdilullo@yahoo.com' }
+{ email1: 'alexanderfares@gmail.com' }
+{ email1: 'brentpchicago@gmail.com' }
+{ email1: 'boothorthodontics@boothorthodontics.com' }
+{ email1: 'ksnesavage@timacusa.com' }
+{ email1: 'colinberty40@yahoo.co.uk' }
+{ email1: 'aqpowell@gmail.com' }
+{ email1: 'loribermudez@gmail.com' }
+{ email1: 'colinberty40@yahoo.co.uk' }
+{ email1: 'twanger51@yahoo.com' }
+{ email1: 'kim.c@stramowski.com' }
+{ email1: 'linave16@yahoo.com' }
+{ email1: 'meagan.ortiz21@yahoo.com' }
+{ email1: 'roberthierry2@yahoo.fr' }
+{ email1: 'wmcdannell@yahoo.com' }
+{ email1: 'ryan.buness@gmail.com' }
+{ email1: 'keyakoli@gmail.com' }
+{ email1: 'lihong1030@sina.cn' }
+{ email1: 'greg.breyer@gmail.com' }
+{ email1: 'fitzgerald.0225@gmail.com' }
+{ email1: 'pamelasue106@yahoo.com' }
+{ email1: 'wjs042006@yahoo.com' }
+{ email1: 'drodriguez@clearchoicehc.com' }
+{ email1: 'shannon507@gmail.com' }
+{ email1: 'atenhex@gmail.com' }
+{ email1: 'anointed2heal1@yahoo.com' }
+{ email1: 'pc6th@yahoo.com' }
+{ email1: 'triciag22@gmail.com' }
+{ email1: 'gregengel@cox.net' }
+{ email1: 'phil.l@stramowski.com' }
+{ email1: '12ozcurls@sbcglobal.net' }
+{ email1: 'ynunez@labodegaltd.com' }
+{ email1: 'jmliebich@yahoo.com' }
+{ email1: 'tdilullo@yahoo.com' }
+{ email1: 'aaron.d.leatherwood@gmail.com' }
+{ email1: 'ripjam12@gmail.com' }
+{ email1: 'lisgar@blueyonder.co.uk' }
+{ email1: 'handcourt@sbcglobal.net' }
+{ email1: 'brockrumbaugh@yahoo.com' }
+{ email1: 'valverde81.av@gmail.com' }
+{ email1: 'sipseysandlin@yahoo.com' }
+{ email1: 'virats95@yahoo.com' }
+{ email1: 'mgreenjack@mac.com' }
+{ email1: 'ian_house_10@yahoo.com' }
+{ email1: 'danieljmescall@yahoo.com' }
+{ email1: 'danieljmescall@yahoo.com' }
+{ email1: 'power_of_purple1@yahoo.com' }
+{ email1: 'phrdlick@gmail.com' }
+{ email1: 'katie.edgren@gmail.com' }
+{ email1: 'bolufunmiwa@yahoo.com' }
+{ email1: 'CLEVERSON@DOCECHALE.COM.BR' }
+{ email1: 'andyreturns2410@yahoo.de' }
+{ email1: 'heinrick.louispierre@gmail.com' }
+{ email1: '' }
+{ email1: 'mer.mega@gmail.com' }
+{ email1: 'janeellei.vergara@yahoo.com' }
+{ email1: 'jpgreco@excite.com' }
+{ email1: 'ian_shelak@yahoo.com' }
+{ email1: 'wayres11@yahoo.com' }
+{ email1: 'glennchatt21@gmail.com' }
+{ email1: 'fitz9016@cinci.rr.com' }
+{ email1: 'goldensharon2@yahoo.com' }
+{ email1: 'jsollazzo@raritanbayaccounting.com' }
+{ email1: 'wayres11@yahoo.com' }
+{ email1: 'kokuasean1@yahoo.com' }
+{ email1: 'sales@victorian.host' }
+{ email1: 'rita.singh@gmail.com' }
+{ email1: 'wtdorough@yahoo.com' }
+{ email1: 'jackman973@yahoo.com' }
+{ email1: 'bobv@vintonenterprises.com' }
+{ email1: 'mathtea@gmail.com' }
+{ email1: 'lela1044@yahoo.com' }
+{ email1: 'cgparmer@me.com' }
+{ email1: 'billlacy57@yahoo.com' }
+{ email1: 'maryme@me.com' }
+{ email1: 'lizelliott71@gmail.com' }
+{ email1: 'ybjoan@gmail.com' }
+{ email1: 'e.e.welch@comcast.net' }
+{ email1: 'cindy.yangyang09@gmail.com' }
+{ email1: 'andymazur02@gmail.com' }
+{ email1: 'kle6261@tds.net' }
+{ email1: 'cnelson755@cox.net' }
+{ email1: 'kylewooster@yahoo.com' }
+{ email1: 'shandad@gmail.com' }
+{ email1: 'bertuccimaria87@gmail.com' }
+{ email1: 'taylor.fatima627@yahoo.com' }
+{ email1: 'nikiwoods88@yahoo.com' }
+{ email1: 'nvoorhies@gmail.com' }
+{ email1: 'm_derossett@yahoo.com' }
+{ email1: 'gce5314@sbcglobal.net' }
+{ email1: 'ernestinerhumiston@gmail.com' }
+{ email1: 'sterling.jennifer@gmail.com' }
+{ email1: 'cynthia.ngo@thyssenkrupp.com' }
+{ email1: 'juliegauger@gmail.com' }
+{ email1: 'cymiobebe@gmail.com' }
+{ email1: 'bripal2003@yahoo.com' }
+{ email1: 'bob@theparisfoundation.org' }
+{ email1: 'iain.maccallum@ntlworld.com' }
+{ email1: 'iain.maccallum@ntlworld.com' }
+{ email1: 'jennifer31castillo@yahoo.com' }
+{ email1: 'ravir@bassettdirect.ca' }
+{ email1: 'phykass@yahoo.com' }
+{ email1: 'chuflippo@gmail.com' }
+{ email1: 'fdiprima@gmail.com' }
+{ email1: 'k_r_venkatesh@yahoo.com' }
+{ email1: 'recruiting@fluenceportland.com' }
+{ email1: 'de.caluwe@gmx.de' }
+{ email1: 'moelobo@verizon.net' }
+{ email1: 'acrawfis@yahoo.com' }
+{ email1: 'wgkilzer@gmail.com' }
+{ email1: 'edgar@comp-u-net.com' }

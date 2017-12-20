@@ -1,0 +1,12 @@
+{
+  "name": "express-html",
+  "version": "0.0.1",
+  "main" : "server.js",
+  "dependencies": {
+    "express": "^4.10.2",
+    "nodemailer":"*"
+  },
+  "engines": {
+    "node": "6.9.4"  
+  }
+}

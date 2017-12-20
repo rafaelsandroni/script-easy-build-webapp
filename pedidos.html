@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>PedidosWhats! Ferramenta de delivery via WhatsApp. Uma nova maneira de receber pedidos</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+.landing-image {
+  position: fixed;
+  display: block;
+
+    background-size: cover !important;
+    background-image: url('https://s3.amazonaws.com/media.ids/67528_webciclustertruck3f.jpg') !important;
+
+  -webkit-filter: blur(0.1px);
+  -moz-filter: blur(0.1px);
+  -o-filter: blur(0.1px);
+  -ms-filter: blur(0.1px);
+  filter: blur(0.1px);
+}
+
+ .highlightme { background-color:#fff;filter: blur(0.1px);-webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: none; }
+
+
+
+/*whatsapp*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marvel-device .screen {
+  text-align: left;
+}
+
+.screen-container {
+  height: 100%;
+}
+
+/* Status Bar */
+
+.status-bar {
+  height: 25px;
+  background: #004e45;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+.status-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.status-bar div {
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 0 0 8px;
+  font-weight: 600;
+}
+
+/* Chat */
+
+.chat {
+  height: calc(100% - 69px);
+}
+
+.chat-container {
+  height: 100%;
+}
+
+/* User Bar */
+
+.user-bar {
+  height: 55px;
+  background: #005e54;
+  color: #fff;
+  padding: 0 8px;
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.user-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.user-bar div {
+  float: left;
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+}
+
+.user-bar .actions {
+  float: right;
+  margin: 0 0 0 20px;
+}
+
+.user-bar .actions.more {
+  margin: 0 12px 0 32px;
+}
+
+.user-bar .actions.attachment {
+  margin: 0 0 0 30px;
+}
+
+.user-bar .actions.attachment i {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.user-bar .avatar {
+  margin: 0 0 0 5px;
+  width: 2em;
+  height: 2em;
+}
+
+.user-bar .avatar img {
+  border-radius: 50%;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: block;
+  width: 100%;
+}
+
+.user-bar .name {
+  font-size: 17px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  letter-spacing: 0.3px;
+  margin: 0 0 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 30em;
+}
+
+.user-bar .status {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Conversation */
+
+.conversation {
+  height: calc(100% - 12px);
+  position: relative;
+  background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+  z-index: 0;
+}
+
+.conversation ::-webkit-scrollbar {
+  transition: all .5s;
+  width: 5px;
+  height: 1px;
+  z-index: 10;
+}
+
+.conversation ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation ::-webkit-scrollbar-thumb {
+  background: #b3ada7;
+}
+
+.conversation .conversation-container {
+  height: calc(100% - 68px);
+  box-shadow: inset 0 10px 10px -10px #000000;
+  overflow-x: hidden;
+  padding: 0 16px;
+  margin-bottom: 5px;
+}
+
+.conversation .conversation-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Messages */
+
+.message {
+  color: #000;
+  clear: both;
+  line-height: 18px;
+  font-size: 15px;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+}
+
+.message:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.metadata {
+  display: inline-block;
+  float: right;
+  padding: 0 0 0 7px;
+  position: relative;
+  bottom: -4px;
+}
+
+.metadata .time {
+  color: rgba(0, 0, 0, .45);
+  font-size: 11px;
+  display: inline-block;
+}
+
+.metadata .tick {
+  display: inline-block;
+  margin-left: 2px;
+  position: relative;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.metadata .tick svg {
+  position: absolute;
+  transition: .5s ease-in-out;
+}
+
+.metadata .tick svg:first-child {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(180deg);
+          transform: perspective(800px) rotateY(180deg);
+}
+
+.metadata .tick svg:last-child {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+          transform: perspective(800px) rotateY(0deg);
+}
+
+.metadata .tick-animation svg:first-child {
+  -webkit-transform: perspective(800px) rotateY(0);
+          transform: perspective(800px) rotateY(0);
+}
+
+.metadata .tick-animation svg:last-child {
+  -webkit-transform: perspective(800px) rotateY(-179.9deg);
+          transform: perspective(800px) rotateY(-179.9deg);
+}
+
+.message:first-child {
+  margin: 16px 0 8px;
+}
+
+.message.received {
+  background: #fff;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+}
+
+.message.received .metadata {
+  padding: 0 0 0 16px;
+}
+
+.message.received:after {
+  border-width: 0px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+  top: 0;
+  left: -10px;
+}
+
+.message.sent {
+  background: #e1ffc7;
+  border-radius: 5px 0px 5px 5px;
+  float: right;
+}
+
+.message.sent:after {
+  border-width: 0px 0 10px 10px;
+  border-color: transparent transparent transparent #e1ffc7;
+  top: 0;
+  right: -10px;
+}
+
+/* Compose */
+
+.conversation-compose {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+}
+
+.conversation-compose div,
+.conversation-compose input {
+  background: #fff;
+  height: 100%;
+}
+
+.conversation-compose .emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 5px 0 0 5px;
+  flex: 0 0 auto;
+  margin-left: 8px;
+  width: 5em;
+}
+
+.conversation-compose .input-msg {
+  border: 0;
+  flex: 1 1 auto;
+  font-size: 16px;
+  margin: 0;
+  outline: none;
+  min-width: 1em;
+}
+
+.conversation-compose .photo {
+  flex: 0 0 auto;
+  border-radius: 0 0 5px 0;
+  text-align: center;
+  position: relative;
+  width: 48px;
+}
+
+.conversation-compose .photo:after {
+  border-width: 0px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: "";
+  top: 0;
+  right: -10px;
+}
+
+.conversation-compose .photo i {
+  display: block;
+  color: #7d8488;
+  font-size: 24px;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+}
+
+.conversation-compose .send {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 0;
+  position: relative;
+  outline: none;
+}
+
+.conversation-compose .send .circle {
+  background: #008a7c;
+  border-radius: 50%;
+  color: #fff;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conversation-compose .send .circle i {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+/* Small Screens */
+
+@media (max-width: 768px) {
+  .marvel-device.nexus5 {
+    border-radius: 0;
+    flex: none;
+    padding: 0;
+    max-width: none;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .name { display: none; }
+  .marvel-device > .screen .chat {
+    visibility: visible;
+  }
+
+  .marvel-device {
+    visibility: hidden;
+  }
+
+  .marvel-device .status-bar {
+    display: none;
+  }
+
+  .screen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .conversation {
+    height: calc(100vh - 55px);
+  }
+  .conversation .conversation-container {
+    height: calc(100vh - 120px);
+  }
+}
+
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', 'aaa4360be60c1fda4c7790d2d48562ef64e4dd87');
+</script>
+
+<script src="https://my.hellobar.com/40d775ef992cb7e73a4fb2cf228b087bf0728db7.js" type="text/javascript" charset="utf-8" async="async"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+
+
+/* Meme */
+
+var memes = [
+	'Dude, you smashed my turtle saying "I\'M MARIO BROS!"',
+	'Dude, you grabed seven oranges and yelled "I GOT THE DRAGON BALLS!"',
+	'Dude, you threw my hamster across the room and said "PIKACHU I CHOOSE YOU!"',
+	'Dude, you congratulated a potato for getting a part in Toy Story',
+	'Dude, you were hugging an old man with a beard screaming "DUMBLEDORE YOU\'RE ALIVE!"',
+	'Dude, you were cutting all my pinapples yelling "SPONGEBOB! I KNOW YOU\'RE THERE!"',
+];
+
+var random = document.querySelector('#random');
+
+random.innerHTML = memes[Math.floor(Math.random() * memes.length)];
+
+/* Time */
+
+var deviceTime = document.querySelector('.status-bar .time');
+var messageTime = document.querySelectorAll('.message .time');
+
+deviceTime.innerHTML = moment().format('h:mm');
+
+setInterval(function() {
+	deviceTime.innerHTML = moment().format('h:mm');
+}, 1000);
+
+for (var i = 0; i < messageTime.length; i++) {
+	messageTime[i].innerHTML = moment().format('h:mm A');
+}
+
+/* Message */
+
+var form = document.querySelector('.conversation-compose');
+var conversation = document.querySelector('.conversation-container');
+
+form.addEventListener('submit', newMessage);
+
+function newMessage(e) {
+	var input = e.target.input;
+
+	if (input.value) {
+		var message = buildMessage(input.value);
+		conversation.appendChild(message);
+		animateMessage(message);
+	}
+
+	input.value = '';
+	conversation.scrollTop = conversation.scrollHeight;
+
+	e.preventDefault();
+}
+
+function buildMessage(text) {
+	var element = document.createElement('div');
+
+	element.classList.add('message', 'sent');
+
+	element.innerHTML = text +
+		'<span class="metadata">' +
+			'<span class="time">' + moment().format('h:mm A') + '</span>' +
+			'<span class="tick tick-animation">' +
+				'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck" x="2047" y="2061"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#92a58c"/></svg>' +
+				'<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg>' +
+			'</span>' +
+		'</span>';
+
+	return element;
+}
+
+function animateMessage(message) {
+	setTimeout(function() {
+		var tick = message.querySelector('.tick');
+		tick.classList.remove('tick-animation');
+	}, 500);
+}
+
+/*
+var chatMessages = [{
+  name: "ms1",
+  msg: "Who are you?",
+  delay: 100,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+
+},{
+  name: "ms1",
+  msg: "Who are you?",
+  delay: 500,
+  align: "right",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms2",
+  msg: "We are young team of entrepreneurs, developers, designers and visionaries. We are based in Berlin and started working on Freedactics in early 2015.",
+  delay: 200,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms3",
+  msg: "Could you describe Freedactics in one sentence?",
+  delay: 500,
+  align: "right",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms4",
+  msg: "Everything from lecture to exam in your pocket: Freedactics is a cloud-based platform build for students needs.",
+  delay: 500,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms5",
+  msg: "And the longer version?",
+  delay: 200,
+  align: "right",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms6",
+  msg: "As students we use to organize all our daily life around web and mobile technology, except the actual studying part. For learning we still use huge amounts of paper, books and heavy backpacks.",
+  delay: 600,
+  align: "left",
+  showTime: false,
+  time: "19:58"
+},
+{
+  name: "ms7",
+  msg: "Why? Because there is no solution out there to help students or teachers to easily digitalize their learning processes and contents. We think that learning should be fast, simple and effective. A platform for studying should give people the option to learn at their own scope, with their own contents integrated.",
+  delay: 500,
+  align: "left",
+  showTime: false,
+  time: "19:58"
+},
+{
+  name: "ms8",
+  msg: "This is why we developed Freedactics – a cloud-based solution tailored to students needs.",
+  delay: 600,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms9",
+  msg: "What makes you different from other learning platforms?",
+  delay: 100,
+  align: "right",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms10",
+  msg: "We understand the needs of individual student. We don’t focus so much on content publishing or learning management but on learning. At the same time we acknowledge the need to integrate different perspectives, such as flash cards, content and task management.",
+  delay: 500,
+  align: "left",
+  showTime: false,
+  time: "19:58"
+},
+{
+  name: "ms11",
+  msg: "So we end up with a unique mix of focus on User Experience and thrive towards integration.",
+  delay: 4000,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms12",
+  msg: "What is your vision for the future?",
+  delay: 600,
+  align: "right",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms14",
+  msg: "We are releasing an App right now. But that’s only breaking ground. In fact, we have something much bigger in mind: a universe of education! Our vision is to connect people, connect tools and power learning through intelligent systems.",
+  delay: 1000,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms15",
+  msg: "Thanks! Something you want to add?",
+  delay: 2000,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+},
+{
+  name: "ms16",
+  msg: "You are welcome! Yes, check out freedactics.com!",
+  delay: 1000,
+  align: "left",
+  showTime: true,
+  time: "19:58"
+}
+                   ];
+var chatDelay = 0;
+
+function onRowAdded() {
+  $('.chat-container').animate({
+    scrollTop: $('.chat-container').prop('scrollHeight')
+  });
+};
+$.each(chatMessages, function(index, obj) {
+  chatDelay = chatDelay + 4000;
+  chatDelay2 = chatDelay + obj.delay;
+  chatDelay3 = chatDelay2 + 10;
+  scrollDelay = chatDelay;
+  chatTimeString = " ";
+  msgname = "." + obj.name;
+  msginner = ".messageinner-" + obj.name;
+  spinner = ".sp-" + obj.name;
+  if (obj.showTime == true) {
+    chatTimeString = "<span class='message-time'>" + obj.time + "</span>";
+  }
+  $(".chat-message-list").append("<li class='message-" + obj.align + " " + obj.name + "' hidden><div class='sp-" + obj.name + "'><span class='spinme-" + obj.align + "'><div class='spinner'><div class='bounce1'></div><div class='bounce2'></div><div class='bounce3'></div></div></span></div><div class='messageinner-" + obj.name + "' hidden><span class='message-text'>" + obj.msg + "</span>" + chatTimeString + "</div></li>");
+  $(msgname).delay(chatDelay).fadeIn();
+  $(spinner).delay(chatDelay2).hide(1);
+  $(msginner).delay(chatDelay3).fadeIn();
+  setTimeout(onRowAdded, chatDelay);
+  setTimeout(onRowAdded, chatDelay3);
+  chatDelay = chatDelay3;
+});
+*/
+
+	$(".landing-image").css("background-image", "url(/images/r-srchbg_white.png) no-repeat");
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item');
+
+		$('.ui.search')
+		  .search({
+		    type          : 'category',
+		    minCharacters : 3,
+		    apiSettings   : {
+		      onResponse: function(githubResponse) {
+		        var
+		          response = {
+		            results : {}
+		          }
+		        ;
+		        // translate GitHub API response to work with search
+		        $.each(githubResponse.items, function(index, item) {
+		          var
+		            language   = item.tag || 'Unknown',
+		            maxResults = 8
+		          ;
+		          if(index >= maxResults) {
+		            return false;
+		          }
+		          // create new language category
+		          if(response.results[language] === undefined) {
+		            response.results[language] = {
+		              name    : language,
+		              results : []
+		            };
+		          }
+		          // add result to category
+		          response.results[language].results.push({
+		            title       : item.name,
+		            description : 'item.description',
+		            url         : item.html_url
+		          });
+		        });
+		        return response;
+		      },
+		      url: '/searchdoc'
+		    }
+		  });
+
+
+
+    });
+  
+  </script>
+</head>
+<body>
+
+
+
+<!-- Following Menu -->
+<!--<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+    <a href="/app" class="active item">Negociar online</a>
+    <a class="item">Como funciona</a>
+    <a class="item">Vantagens</a>
+    <a class="item">Institucional</a>
+    <div class="right menu">
+      <div class="item">
+          <a href="/institucional" class="ui default button">recuperação de dívidas</a>
+      </div>
+      <div class="item">
+        <a class="ui huge positive button">consultar meu CPF <i class="right arrow icon"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!-- Sidebar Menu - - >
+<div class="ui vertical inverted sidebar menu">
+  <a class="active item">Negociar</a>
+  <a class="item">Consultar meu CPF</a>
+</div>-->
+
+
+
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui vertical masthead center aligned segment landing-image" id="landing">
+
+
+    <div class="ui text container ">
+      <h1 class="ui header">
+        <span class="highlightme">Uma nova maneira de receber pedidos pelo WhatsApp!</span>
+      </h1>      
+      <h2><span class="highlightme">&Eacute; pr&aacute;tico. Sem comiss&atilde;o.</span></h2>
+  <a href="#como-funciona" class="ui button red">ENTENDA COMO FUNCIONA</a>
+    </div>
+
+  </div>
+
+  <div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="center aligned column">
+		<h3>O assistente virtual que te d&aacute; uma m&atilde;o no seu restaurante</h3>
+	<br>
+	<p>
+
+N&atilde;o tem comiss&otilde;es. Pedidos ilimitados.<br>
+ Mais pedidos e mais vendas para seu delivery.
+<br>
+<br>
+</p>
+        <div class="ui two column centered grid">
+
+<div class="ui center message">
+  <div class="header">
+    Ferramenta de Delivery Automatizado por Mensagem
+  </div>
+  <ul class="list">
+    <li>Seu cliente n&atilde;o precisa baixar aplicativo</li>
+    <li>Voc&ecirc; n&atilde;o paga comiss&atilde;o sobre percentual de vendas</li>
+    <li>&Eacute; onde seus clientes est&atilde;o e onde amam conversar</li>
+   <li>Garanta efici&ecirc;ncia de seu neg&oacute;cio reduzindo custos de telefonia</li>
+  </ul>
+</div>
+</div>
+
+<div class="ui center " id="como-funciona">
+	<br><br>
+	<p>Veja uma demonstra&ccedil;&atilde;o</p>
+</div>
+
+	<br>
+	<div class="ui two column centered grid">
+        <div class="chat">
+          <div class="chat-container">
+            <div class="user-bar">
+              <div class="avatar">
+                <img src="https://img.elo7.com.br/product/zoom/191665B/logo-culinaria-arte-logotipo.jpg" alt="Avatar">
+              </div>
+              <div class="name" style="text-align:left;">
+                <span>Restaurante Brasil</span>
+                <span class="status">online</span>
+              </div>
+            </div>
+            <div class="conversation">
+              <div class="conversation-container">
+
+		<div class="message received" style="text-align:left;">
+                  Boa noite, Mariana! Sou o rob&ocirc; assistente do Restaurante <br> Brasil. Estou aqui pra ajudar vc a escolher seu pedido.
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+
+                <div class="message received" style="text-align:left;">
+T&aacute; afim de experimentar o que hoje?
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+
+                <div class="message sent" style="text-align:right;">
+                  Hummm
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+<div class="message sent" style="text-align:right;">
+                  Tava pensando em um hamb&uacute;rger, o que tem a&iacute;?
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+
+                <div class="message received" style="text-align:left;">
+                  Vou te contar um segredinho, tenho aqui
+			<br>
+			 o melhor sandu&iacute;che da regi&atilde;o<br>
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+                <div class="message received" style="text-align:left;">
+                  <img class="ui medium rounded image" src="https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpg" style="width:20em;height:15em;"><br>
+                  Hamb. 290g + Salada + Molho da casa<br>
+		  <b>Hamburger da Casa por R$ 29,00</b>
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+                <div class="message received" style="text-align:left;">
+                  <span id="randomx">&Eacute; s&oacute; para voc&ecirc; mesmo? Digite "<b>MAIS 1</b>" para adicionar mais uma unidade.
+		</span>
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+                <div class="message received" style="text-align:left;">
+                  <span id="randomx">ou ent&atilde;o digite "<b>QUERO</b>" e comecamos os trabalhos, tem tamb&eacute;m<br>outras op&ccedil;&otilde;es se voce digitar "<b>OUTROS</b>"</span>
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+
+<!--<div class="message sent" style="text-align:right;">
+                  quero este e mais um refrigerante!!
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+-->
+
+              </div>
+              <form class="conversation-compose">
+                <div class="emoji">
+                  <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"/></svg>
+                </div>
+                <input class="input-msg" name="input" placeholder="Digite aqui" autocomplete="on"></input>
+                <div class="photo">
+                  <i class="zmdi zmdi-camera"></i>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+</div>
+        </div>
+      </div>
+</div>
+</div>
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+<div class="row">
+        <div class="center aligned column">
+		<h3>Economize tempo e aplique na ess&ecirc;ncia do seu neg&oacute;cio</h3>
+<p>PedidosWhats é uma ferramenta de delivery automatizado. Você cadastra seu número de WhatsApp, registra seu cardápio e o nosso assistente virtual se encarregará de atender seus cliente.
+Garantindo satisfação, maior fidelida
+, redu&ccedil;&atilde;o de custos 
+e
+o caminho
+ certo para voc&ecirc; <b>conquistar o seu sonho</b>!</p>
+</div>
+</div>
+      <div class="row">
+        <div class="center aligned column">
+<div class="ui huge horizontal list">
+  <div class="item">
+    <div class="content">
+      <div class="header">1. Cadastre seu n&uacute;mero</div>      
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="header">2. Seus produtos</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="header">3. Divulgue seu WhatsApp</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="header">4. Fa&ccedil;a sucesso!</div>
+    </div>
+  </div>
+</div>
+	</div>
+      </div>
+      <div class="row">
+        <div class="center aligned column">
+	<p>Deixe seu e-mail para entrar na lista de espera</p>
+<form action="/savedata">
+<div class="ui huge input">
+  <input placeholder="Digite seu e-mail..." type="text" name="email1">
+</div>
+<br><br>
+<div class="ui huge ">
+  <button class="ui huge button red">SIM! Quero receber pedidos pelo WhatsApp!</button>
+</div>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="ui vertical stripe quote segment" style="display:;">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column">
+	<h2>Diga Tchau para as comiss&otilde;es <br>de aplicativos!</h2>
+          <p>Sem cobran&ccedil;a de comiss&atilde;o por pedido. Apenas um valor fixo por m&ecirc;s voc&ecirc; e ter&aacute; seu sistema automatizado de pedidos ilimitados.</p>
+        </div>
+        <div class="column">
+	<h2>Diga Ol&aacute; para a efici&ecirc;ncia <br>de seu estabelecimento!
+</h2>
+<p>Voc&ecirc; n&atilde;o precisa mais de m&uacute;ltiplas linhas telef&ocirc;nicas e atendentes. Reduza seu custo de folha e aumente a satisfa&ccedil;&atilde;o de seus clientes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="eight wide column">
+          <h3 class="ui header">Painel de Pedidos</h3>
+          <p>Pedidos aguardando atendimento, feedbacks de clientes... E todas as conversas s&atilde;o visualizadas pelo Painel de Pedidos.</p>
+          <h3 class="ui header">Intelig&ecirc;ncia Artificial</h3>
+          <p>O assistente virtual orienta seus clientes durante o atendimento, recomenda os seus produtos, tira d&uacute;vidas, faz acompanhamento de pedidos e feedbacks... e te avisa quando o pedido for escolhido.</p>
+        </div>
+        <div class="six wide right floated column">
+          <img src="/img/5e7789165a66f1ca5cfd092214a4c541.png" class="ui large bordered rounded image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--div class="ui vertical stripe segment">
+    <div class="ui text container">
+    <h4 class="ui horizontal header ">
+        <a href="#">DICAS PARA SUA VIDA FINANCEIRA</a>
+      </h4>
+      <h3 class="ui header">Como recuperar o nome sujo?</h3>
+      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
+      <a class="ui large button">Read More</a>
+      
+      <h3 class="ui header">Emprestimo vale a pena para pagar divida?</h3>
+      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
+      <a class="ui large button">I'm Still Quite Interested</a>
+    </div>
+  </div-->
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="five wide column">
+          <h4 class="ui inverted header">Quem Somos</h4>
+ 	  <p>Acreditamos que a tecnologia pode colaborar com o desenvolvimento econ&ocirc;mico do Brasil, por isso ajudamos nossos parceiros a atingir maior produtividade e qualidade de vendas, sem grandes investimentos.</p>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Receber pedidos pelo WhatsApp!</h4>
+          <p>Deixe seu e-mail para entrar na lista de espera.</p>
+<form action="/savedata">
+<div class="ui huge input">
+  <input placeholder="Digite seu e-mail..." type="text" name="email2">
+</div>
+<br><br>
+<div class="ui  ">
+  <button class="ui button red">Inscrever!</button>
+</div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+
+
+
+</script>
+
+<script>
+  window.intergramId = "209173166";
+  window.intergramCustomizations = {
+    titleClosed: 'Oi, como posso ajudar?',
+    titleOpen: 'PedidosWhats!',
+    introMessage: 'Oi, o que posso fazer por voce hoje?',
+    autoResponse: 'Aguarde um instante...',
+    autoNoResponse: 'Ops, deixe seu contato (Telefone ou E-mail) que iremos retornar nossa conversa quando alguem estiver disponivel...',
+
+    // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+    mainColor: "#db2828",
+    alwaysUseFloatingButton: false // use the mobile floating button also on large screens
+  };
+
+</script>
+<!--<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109082049-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109082049-1');
+</script>
+</html>
+
